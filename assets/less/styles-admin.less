@@ -1,0 +1,235 @@
+/*Backend CSS*/
+@import "__lesshat.less";
+
+.zwpocp-presets-tabs-nav{
+	display: block;
+	position: relative;
+	border-bottom: 1px solid #ccc;
+	margin: 5px 0 15px;
+	.zwpocp-preset-tab{
+		display: inline-block;
+		padding: 10px;
+		font-weight: 700;
+		border-bottom: 1px solid transparent;
+		margin: 0 0 -1px;
+		border-radius: 2px 2px 0 0;
+		cursor: pointer;
+		&.active{
+			border-color: #8870FF;
+			color: #8870FF;
+			cursor: default;
+		}
+		&:hover{
+			color: #8870FF;
+		}
+	}
+}
+
+.zwpocp-presets-tabs{
+	display: block;
+	position: relative;
+	margin: 0 0 15px;
+	.zwpocp-presets-tab{
+		display: none;
+		&.active{
+			display: block;
+		}
+	}
+}
+
+.zwpocp-presets-list{
+	&, li{
+		display: block;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	&{
+		margin: 15px 0;
+	}
+	li{
+		margin: 5px 0;
+		padding: 5px 10px;
+		background: #fafafa;
+		
+		.preset{
+			.preset-preview-main{
+				text-decoration: none;
+				.preset-title{
+					font-size: 16px;
+					font-weight: 700;
+					color: #444;
+				}
+				.preset-creation-date{
+					font-size: 12px;
+					color: #777;
+				}
+				&:hover{
+					.preset-title{
+						color: #8870FF;
+					}
+				}
+			}
+			.preset-actions{
+				display: block;
+				padding: 3px 0;
+				> span,
+				> a{
+					display: inline-block;
+					font-weight: 400;
+					border-radius: 2px;
+					padding: 3px 5px;
+					margin-right: 3px;
+					cursor: pointer;
+					text-decoration: none;
+					font-size: 14px;
+					text-align: center;
+					line-height: 1.2;
+					border: 1px solid transparent;
+					.dashicons{
+						font-size: 16px;
+						line-height: 1;
+						width: auto;
+						height: auto;
+					}
+				}
+				.preset-use{
+					border-color: lighten( #8870FF, 10% );
+					color: #8870FF;
+					&:hover{
+						border-color: transparent;
+						background: #8870FF;
+						color: #fff;
+					}
+				}
+				.preset-download{
+					border-color: #aaa;
+					color: #777;
+					&:hover{
+						border-color: transparent;
+						background: #953163;
+						color: #fff;
+					}
+				}
+				.preset-preview{
+					border-color: #aaa;
+					color: #777;
+					&:hover{
+						border-color: transparent;
+						background: #27AE60;
+						color: #fff;
+					}
+				}
+				.preset-delete{
+					color: #C82647;
+					float: right;
+					&:hover{
+						background: #C82647;
+						color: #fff;
+					}
+				}
+			}
+		}
+
+		&:hover{
+			background: #fefefe;
+		}
+	}
+}
+
+.zwpocp-preset-create-block{
+	display: block;
+	margin: 25px 0;
+	input[type="text"]{
+		padding: 5px;
+		color: #444;
+		border: 1px solid #ccc;
+		background: #fff;
+		border-radius: 2px;
+		&:focus{
+			border-color: #44BBFF;
+		}
+		&.invalid-name{
+			border-color: #C82647;
+		}
+	}
+}
+
+
+.zwpocp-uploader-holder{
+	display: block;
+	padding: 15px;
+	margin: 15px 0 10px;
+	background: #fefefe;
+	border: 1px dashed #ccc;
+	text-align: center;
+	color: #8870FF;
+	cursor: pointer;
+	&:hover{
+		border-color: #8870FF;
+	}
+
+	// .dashicons{
+	// 	font-size: 64px;
+	// 	color: #aaa;
+	// 	width: auto;
+	// 	height: auto;
+	// }
+	.filename{
+		display: inline-block;
+		line-height: 20px;
+		margin: 0 5px;
+	}
+}
+
+.zwpocp-preset-option-row{
+	margin: 5px 0 10px;
+	.zwpocp-label{
+		font-weight: 500;
+		margin: 0 0 3px;
+	}
+}
+
+.zwpocp-preset-create-error{
+	display: block;
+	padding: 5px;
+	background: #ffc7c7;
+	color: #810303;
+	border-radius: 2px;
+}
+
+.zwpocp-preset-import-block{
+	display: block;
+	margin: 25px 0;
+}
+
+#customize-controls{
+	#accordion-section-zwpocp_presets_oneclick_section{
+		.accordion-section-title{
+			color: #C82647;
+			text-transform: uppercase;
+			padding-left: 40px;
+			&:before{
+				content: "\f108";
+				font: 400 20px/1 dashicons;
+				speak: none;
+				display: block;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				text-decoration: none!important;
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				z-index: 1;
+			}
+		}
+		.accordion-section-title:focus, 
+		.accordion-section-title:hover{
+			color: #C82647;
+			border-left-color: #C82647;
+			&:after{
+				color: #C82647;
+			}
+		}
+	}
+}
